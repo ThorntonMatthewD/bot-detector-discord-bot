@@ -4,7 +4,7 @@ import discord.ext.test as dpytest
 from conftest import test_bot
 from src.cogs.fun_commands import funCommands
 
-@pytest.fixture(scope='module')
+@pytest.fixture
 async def set_up_bot(test_bot):
     await test_bot.add_cog(funCommands(test_bot))
     yield test_bot
