@@ -1,10 +1,6 @@
 name: FastAPI (API) CI
 
-on:
-  push:
-    paths:
-    - 'api/**'
-    - '.github/workflows/api-ci.yml'
+on: [push, pull_request]
 
 jobs:
   pytest:
