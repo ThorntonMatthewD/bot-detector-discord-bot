@@ -19,6 +19,8 @@ colorama = "==0.4.5"
 dpytest = "*"
 pytest = "*"
 pytest-asyncio = "*"
+coverage = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.10"
