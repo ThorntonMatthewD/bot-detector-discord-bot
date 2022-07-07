@@ -7,6 +7,7 @@ from discord.ext.commands import Bot
 @pytest.fixture
 async def test_bot():
     bot: discord.Client = Bot(command_prefix='!')
-    bot.Session = aiohttp.ClientSession()
+    async with aiohttp.ClientSession() as session:
+        bot.Session = session
 
-    yield bot
+        yield bot
