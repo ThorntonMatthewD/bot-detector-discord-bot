@@ -9,7 +9,7 @@ from src.cogs.fun_commands import funCommands
 @pytest.fixture(autouse=True)
 async def set_up_bot(test_bot):
     await test_bot.add_cog(funCommands(test_bot))
-    dpytest.configure(set_up_bot)
+    dpytest.configure(test_bot)
     return test_bot
 
 
