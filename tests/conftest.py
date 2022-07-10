@@ -22,4 +22,5 @@ async def test_bot(event_loop) -> AsyncIterator[discord.Client]:
     async with aiohttp.ClientSession() as session:
         bot.Session = session
 
-        yield bot
+        async with bot:
+            yield bot
