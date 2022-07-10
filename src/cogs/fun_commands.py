@@ -52,7 +52,6 @@ class funCommands(Cog):
         )
         embed.add_field(name="BD API Status:", value=f"{isServerUp}", inline=False)
         await ctx.reply(embed=embed)
-        pass
 
     @commands.command()
     async def panic(self, ctx: Context):
