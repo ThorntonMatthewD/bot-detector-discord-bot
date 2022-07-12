@@ -14,6 +14,6 @@ async def set_up_bot(test_bot):
 
 
 @pytest.mark.asyncio
-async def test_poke():
-    await dpytest.message("!poke")
-    assert dpytest.verify().message().contains().content("Teehee")
+async def test_panic():
+    await dpytest.message("!panic")
+    assert dpytest.verify().message().contains().content("https://i.imgur.com/xAhgsgC.png")
